@@ -2,7 +2,7 @@
   <div class="conteneur pied__grille">
     <div class="pied__bloc">
       <p class="pied__nom">{{ site.nom }}</p>
-      <p>{{ site.association }}<br>{{ site.ville }}{% if site.adresse.rue %}<br>{{ site.adresse.rue }}, {{ site.adresse.codePostal }} {{ site.adresse.ville }}{% endif %}</p>
+      <p>{{ site.association }}<br>{% if site.adresse.rue %}{{ site.adresse.rue }}<br>{% endif %}{% if site.adresse.codePostal %}{{ site.adresse.codePostal }} {% endif %}{{ site.adresse.ville }}</p>
       <p><a href="{{ site.telephone | telHref }}">{{ site.telephoneAffiche }}</a>{% if site.email %}<br><a href="mailto:{{ site.email }}">{{ site.email }}</a>{% endif %}</p>
     </div>
     <nav class="pied__bloc" aria-label="Pages principales">

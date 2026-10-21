@@ -10,6 +10,8 @@
     "@type": "PostalAddress",
     {%- if site.adresse.rue %}
     "streetAddress": {{ site.adresse.rue | dump | safe }},
+    {%- endif %}
+    {%- if site.adresse.codePostal %}
     "postalCode": {{ site.adresse.codePostal | dump | safe }},
     {%- endif %}
     "addressLocality": {{ site.adresse.ville | dump | safe }},

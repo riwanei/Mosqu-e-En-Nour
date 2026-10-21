@@ -1,7 +1,7 @@
 <dl class="infos">
   <div>
     <dt>Adresse</dt>
-    <dd>{% if site.adresse.rue %}{{ site.adresse.rue }}<br>{{ site.adresse.codePostal }} {{ site.adresse.ville }}{% else %}{{ site.adresse.ville }} (Rhône){% endif %}</dd>
+    <dd>{% if site.adresse.rue %}{{ site.adresse.rue }}<br>{{ site.adresse.codePostal }} {{ site.adresse.ville }}{% else %}{% if site.adresse.codePostal %}{{ site.adresse.codePostal }} {% endif %}{{ site.adresse.ville }} (Rhône){% endif %}</dd>
   </div>
   <div>
     <dt>Téléphone</dt>

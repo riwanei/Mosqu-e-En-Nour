@@ -12,7 +12,7 @@ const legal = lire("legal.json");
 const bloquants = [];
 const conseilles = [];
 
-if (!site.adresse.rue || !site.adresse.codePostal) bloquants.push("Adresse postale complète de la mosquée (site.json → adresse). Sans elle, l'itinéraire recherche « Mosquée Ennour, Belleville-en-Beaujolais ».");
+if (!site.adresse.rue) bloquants.push("Numéro et nom de rue de la mosquée (site.json → adresse.rue ; le code postal 69220 est renseigné). Sans elle, l'itinéraire recherche « Mosquée Ennour, Belleville-en-Beaujolais ».");
 if (!site.don.lienConfirme) bloquants.push("Validité du lien de don HelloAsso à faire confirmer par le bureau (site.json → don.lienConfirme).");
 if (!horaires.source) bloquants.push("Source officielle des horaires de prière (horaires.json → source). Sans source, le site affiche « Horaires à confirmer auprès de la mosquée ».");
 if (!Object.keys(calendrier.jours || {}).length) bloquants.push("Calendrier des prières (calendrier.json), à importer avec « npm run horaires:import ».");

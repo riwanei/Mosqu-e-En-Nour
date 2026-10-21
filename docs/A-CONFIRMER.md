@@ -6,7 +6,7 @@ Cette liste est destinée au responsable du site. Tant qu'une information n'est 
 
 | Information | Où la saisir | Ce qui s'affiche en attendant |
 |---|---|---|
-| Adresse postale complète (numéro, rue, code postal) | Réglages → Coordonnées → Adresse | « Belleville-en-Beaujolais (Rhône) ». L'itinéraire recherche « Mosquée Ennour, Belleville-en-Beaujolais » sur la carte. |
+| Numéro et nom de rue (le code postal 69220 est confirmé) | Réglages → Coordonnées → Adresse | « 69220 Belleville-en-Beaujolais (Rhône) ». L'itinéraire recherche « Mosquée Ennour, Belleville-en-Beaujolais » sur la carte. |
 | Validité du lien de don HelloAsso (voir la note ci-dessous) | Réglages → Coordonnées → Dons | Le lien actuel |
 | Source officielle des horaires de prière et calendrier de l'année | Réglages → Horaires + import CSV | « Horaires à confirmer auprès de la mosquée » |
 | Directeur ou directrice de la publication | Réglages → Mentions légales | Rien (obligation légale) |
