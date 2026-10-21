@@ -1,0 +1,81 @@
+---
+layout: layouts/base.njk
+title: "École d'arabe & cours"
+permalink: /ecole-cours/
+description: "École d'arabe de la mosquée En-Nour à Belleville-en-Beaujolais : quatre niveaux, cours le week-end, ouverts à tous. Programme des dorous (tafsir, Ryad as-Salihin, Sîra)."
+---
+<header class="bandeau">
+  <div class="conteneur">
+    <p class="surtitre surtitre--clair">Transmission</p>
+    <h1>École &amp; cours</h1>
+    <p class="bandeau__texte">Depuis 1998, l'école d'arabe accompagne enfants et familles dans l'apprentissage de la langue. Des cours ouverts à tous, arabophones ou non, quel que soit l'âge ou l'origine.</p>
+  </div>
+</header>
+
+<nav class="sommaire conteneur" aria-label="Sur cette page">
+  <ul>
+    <li><a href="#ecole">L'école d'arabe</a></li>
+    <li><a href="#inscriptions">Inscriptions</a></li>
+    <li><a href="#dorous">Dorous</a></li>
+  </ul>
+</nav>
+
+<section class="section" id="ecole" aria-labelledby="ecole-titre">
+  <div class="conteneur">
+    <h2 id="ecole-titre">L'école d'arabe</h2>
+    <div class="grille-3 chiffres">
+      <p class="chiffre"><span class="chiffre__valeur">4</span><span class="chiffre__libelle">niveaux, du préparatoire au niveau 3</span></p>
+      <p class="chiffre"><span class="chiffre__valeur">8</span><span class="chiffre__libelle">classes de 15 élèves au maximum</span></p>
+      <p class="chiffre"><span class="chiffre__valeur">2 h 30</span><span class="chiffre__libelle">par séance, le samedi et/ou le dimanche</span></p>
+    </div>
+    <div class="deux-colonnes deux-colonnes--haut">
+      <div>
+        <h3>Ce que l'on y apprend</h3>
+        <p>Lecture, écriture et compréhension, avec des exercices pratiques. Les élèves sont répartis par niveau et les programmes évoluent chaque année pour améliorer l'apprentissage.</p>
+      </div>
+      <div>
+        <h3>Comment se passent les cours</h3>
+        <p>Les cours ont lieu en présentiel, dans les salles de classe de la mosquée, principalement sur supports papier (livres, manuels, cahiers), complétés si besoin par des médias numériques. Une récréation est prévue pour les plus jeunes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--teinte" id="inscriptions" aria-labelledby="inscriptions-titre">
+  <div class="conteneur conteneur--etroit">
+    <h2 id="inscriptions-titre">Inscriptions et modalités</h2>
+    {% if ecole.anneeScolaire %}<p><strong>Année scolaire {{ ecole.anneeScolaire }}</strong></p>{% endif %}
+    {% if ecole.inscriptionsTexte %}<p>{{ ecole.inscriptionsTexte }}</p>{% endif %}
+    {% if ecole.horairesDetailles %}<p>{{ ecole.horairesDetailles }}</p>{% endif %}
+    {% if ecole.tarifs %}<p>{{ ecole.tarifs }}</p>{% endif %}
+    {% if not ecole.inscriptionsTexte %}
+    <p>Pour connaître les dates d'inscription, les horaires précis des classes et les tarifs de l'année en cours, contactez l'association.</p>
+    {% endif %}
+    <p class="actions">
+      {% if ecole.inscriptionsLien %}<a class="bouton bouton--principal" href="{{ ecole.inscriptionsLien }}" rel="noopener">Inscrire mon enfant</a>{% endif %}
+      <a class="bouton bouton--secondaire" href="{{ site.telephone | telHref }}">Appeler le {{ site.telephoneAffiche }}</a>
+      <a class="bouton bouton--secondaire" href="{{ site.whatsapp }}" rel="noopener">WhatsApp</a>
+    </p>
+    {% if ecole.reglement %}<p><a href="{{ ecole.reglement }}" rel="noopener">Règlement de l'école d'arabe (PDF)</a></p>{% endif %}
+  </div>
+</section>
+
+<section class="section" id="dorous" aria-labelledby="dorous-titre">
+  <div class="conteneur conteneur--etroit">
+    <h2 id="dorous-titre">Les dorous à la mosquée</h2>
+    <p>Des cours de 45 minutes, hors périodes exceptionnelles (Aïd, Ramadan…).</p>
+    <dl class="infos infos--ligne">
+      <div><dt>Mercredi, jeudi, samedi, dimanche</dt><dd>Entre Maghrib et Isha</dd></div>
+      <div><dt>Vendredi</dt><dd>Après la prière d'Asr</dd></div>
+    </dl>
+    <h3>Thèmes abordés</h3>
+    <ul class="themes">
+      <li><span>Tafsir du Coran</span> <span lang="ar" dir="rtl">تفسير القرآن الكريم</span></li>
+      <li><span>Ryad as-Salihin</span> <span lang="ar" dir="rtl">رياض الصالحين</span></li>
+      <li><span>Les noms d'Allah</span> <span lang="ar" dir="rtl">أسماء الله الحسنى</span></li>
+      <li><span>La vie du Prophète ﷺ et des compagnons</span> <span lang="ar" dir="rtl">السيرة النبوية وسيرة الصحابة</span></li>
+      <li><span>Autres ouvrages</span> <span lang="ar" dir="rtl">وكتب أخرى</span></li>
+    </ul>
+    {% if not ecole.dorousValides %}<p class="discret">Programme repris de l'ancien site. Renseignez-vous auprès de la mosquée pour le programme en cours.</p>{% endif %}
+  </div>
+</section>

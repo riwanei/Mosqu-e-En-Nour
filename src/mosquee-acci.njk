@@ -1,0 +1,86 @@
+---
+layout: layouts/base.njk
+title: "La mosquée & l'ACCI"
+permalink: /mosquee-acci/
+description: "Histoire de la mosquée En-Nour de Belleville-en-Beaujolais depuis 1988, missions de l'ACCI, services proposés et documents officiels de l'association."
+---
+<header class="bandeau">
+  <div class="conteneur">
+    <p class="surtitre surtitre--clair">Qui sommes-nous</p>
+    <h1>La mosquée &amp; l'ACCI</h1>
+    <p class="bandeau__texte">Fondée en {{ site.fondation }} par un petit groupe de musulmans engagés au service de la communauté, la mosquée En-Nour est gérée par l'Association Culturelle et Cultuelle Islamique (ACCI).</p>
+  </div>
+</header>
+
+<nav class="sommaire conteneur" aria-label="Sur cette page">
+  <ul>
+    <li><a href="#missions">Missions</a></li>
+    <li><a href="#histoire">Histoire</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#documents">Documents</a></li>
+    <li><a href="#adherer">Adhérer</a></li>
+  </ul>
+</nav>
+
+<section class="section" id="missions" aria-labelledby="missions-titre">
+  <div class="conteneur">
+    <h2 id="missions-titre">Nos missions</h2>
+    <ul class="grille-2 liste-missions">
+      <li class="tuile"><h3>Faire vivre la prière</h3><p>Organiser les prières quotidiennes, les grandes cérémonies et les événements religieux.</p></li>
+      <li class="tuile"><h3>Transmettre</h3><p>Enseigner le Coran, les rites et les pratiques religieuses, ainsi que la langue et la culture arabes.</p></li>
+      <li class="tuile"><h3>Aider</h3><p>Venir en aide aux personnes dans le besoin, musulmanes ou non.</p></li>
+      <li class="tuile"><h3>Accueillir</h3><p>Offrir un lieu de fraternité et de bienveillance, ouvert à celles et ceux qui souhaitent le découvrir.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section--teinte" id="histoire" aria-labelledby="histoire-titre">
+  <div class="conteneur conteneur--etroit">
+    <h2 id="histoire-titre">Notre histoire</h2>
+    <ol class="frise">
+      <li><span class="frise__annee">1988</span><div><h3>Naissance de l'ACCI</h3><p>L'association est créée le 9 août 1988 avec un objectif : bâtir un lieu de prière digne, disponible pour les générations à venir.</p></div></li>
+      <li><span class="frise__annee">1990</span><div><h3>Un lieu pour prier</h3><p>Après plus d'un an de collecte, l'association acquiert le lieu de prière actuel, puis le terrain voisin et une maison.</p></div></li>
+      <li><span class="frise__annee">1998</span><div><h3>L'école d'arabe</h3><p>Héritière de cours donnés dès 1981 au centre social puis à la MJC, l'école ouvre à la mosquée avec moins de vingt enfants. Elle n'a cessé de grandir depuis.</p></div></li>
+      <li><span class="frise__annee">2013</span><div><h3>Le carré musulman</h3><p>Un espace réservé aux sépultures musulmanes ouvre au cimetière paysager de la rue Grange Berchet, à Belleville.</p></div></li>
+      <li><span class="frise__annee">2014</span><div><h3>L'opération Iftar</h3><p>Pendant le Ramadan, l'association offre des repas aux familles et aux personnes isolées. L'opération est reconduite chaque année.</p></div></li>
+      <li><span class="frise__annee">2016</span><div><h3>L'arrivée de l'imam Hamza</h3><p>L'association recrute l'imam Hamza, à l'écoute de ses fidèles.</p></div></li>
+    </ol>
+    <p class="discret">Cette histoire doit beaucoup aux membres des bureaux successifs, aux enseignants et aux bénévoles qui ont porté ces projets.</p>
+  </div>
+</section>
+
+<section class="section" id="services" aria-labelledby="services-titre">
+  <div class="conteneur">
+    <h2 id="services-titre">Les services de la mosquée</h2>
+    <ul class="grille-2">
+      <li class="tuile"><h3>Accompagnement lors d'un décès</h3><p>La mosquée accompagne les familles et réalise la toilette mortuaire, souvent avec les proches, à la morgue. Pour toute demande, appelez le <a href="{{ site.telephone | telHref }}">{{ site.telephoneAffiche }}</a>.</p></li>
+      <li class="tuile"><h3>Enseignement</h3><p>École d'arabe le week-end, enseignement du Coran et dorous à la mosquée. <a href="/ecole-cours/">Voir l'école et les cours</a>.</p></li>
+      <li class="tuile"><h3>Aide aux personnes dans le besoin</h3><p>Colis alimentaires et soutien aux familles en difficulté, ainsi que l'opération Iftar pendant le Ramadan.</p></li>
+      <li class="tuile"><h3>Fêtes et événements religieux</h3><p>Prières des grandes fêtes et événements religieux. Les dates sont annoncées dans les <a href="/actualites/">actualités</a>.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section--teinte" id="documents" aria-labelledby="documents-titre">
+  <div class="conteneur">
+    <h2 id="documents-titre">Documents de l'association</h2>
+    <p>Statuts, règlement intérieur et comptes rendus d'assemblée générale de l'ACCI.</p>
+    <ul class="documents">
+      {%- for doc in documents %}
+      <li><a href="{{ doc.url }}" rel="noopener"><span class="documents__titre">{{ doc.titre }}</span><span class="documents__detail">{{ doc.detail }} · {{ doc.format }}</span></a></li>
+      {%- endfor %}
+    </ul>
+    <p class="discret">Association déclarée · RNA {{ site.rna }} · SIRET {{ site.siret }}</p>
+  </div>
+</section>
+
+<section class="section" id="adherer" aria-labelledby="adherer-titre">
+  <div class="conteneur conteneur--etroit">
+    <h2 id="adherer-titre">Devenir membre de l'ACCI</h2>
+    <p>L'association invite les fidèles à rejoindre ses membres actifs.</p>
+    <p class="actions">
+      {% if site.adhesion.lien %}<a class="bouton bouton--principal" href="{{ site.adhesion.lien }}" rel="noopener">Adhérer en ligne</a>{% endif %}
+      <a class="bouton bouton--secondaire" href="{{ site.adhesion.bulletin }}" rel="noopener">Télécharger le bulletin d'adhésion (PDF)</a>
+    </p>
+  </div>
+</section>

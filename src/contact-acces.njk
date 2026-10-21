@@ -1,0 +1,47 @@
+---
+layout: layouts/base.njk
+title: "Contact & accès"
+permalink: /contact-acces/
+description: "Contacter la mosquée En-Nour de Belleville-en-Beaujolais (Rhône) : téléphone, WhatsApp, itinéraire et conseils pour préparer votre visite."
+---
+<header class="bandeau">
+  <div class="conteneur">
+    <p class="surtitre surtitre--clair">Nous rendre visite</p>
+    <h1>Contact &amp; accès</h1>
+    <p class="bandeau__texte">Une question, une demande d'accompagnement, une visite à préparer ? L'association vous répond.</p>
+  </div>
+</header>
+
+<section class="section" aria-labelledby="contact-titre">
+  <div class="conteneur deux-colonnes deux-colonnes--haut">
+    <div>
+      <h2 id="contact-titre">Coordonnées</h2>
+      {% include "partials/coordonnees.njk" %}
+      <p class="actions">
+        <a class="bouton bouton--principal" href="{{ site.telephone | telHref }}">Appeler</a>
+        <a class="bouton bouton--secondaire" href="{{ site.whatsapp }}" rel="noopener">WhatsApp</a>
+      </p>
+      <p class="discret">Le site ne propose pas de formulaire de contact pour le moment : appelez ou écrivez sur WhatsApp, c'est le moyen le plus sûr d'obtenir une réponse.</p>
+    </div>
+    <div class="carte" id="itineraire">
+      <h2 class="h3">Itinéraire</h2>
+      {% include "partials/itineraire.njk" %}
+      {% if site.transports %}<h3 class="h4">Transports</h3><p>{{ site.transports }}</p>{% endif %}
+      {% if site.stationnement %}<h3 class="h4">Stationnement</h3><p>{{ site.stationnement }}</p>{% endif %}
+      {% if site.accesPmr %}<h3 class="h4">Accessibilité</h3><p>{{ site.accesPmr }}</p>{% endif %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--teinte" id="visite" aria-labelledby="visite-titre">
+  <div class="conteneur conteneur--etroit">
+    <h2 id="visite-titre">Préparer ma visite</h2>
+    <p>Vous souhaitez découvrir la mosquée, seul, en famille, avec une classe ou un groupe ? Prenez contact avec l'association avant de venir : elle vous indiquera les modalités d'accueil et le moment le plus adapté.</p>
+    <ol class="etapes">
+      <li><h3 class="h4">Prévenez l'association</h3><p>Par téléphone au <a href="{{ site.telephone | telHref }}">{{ site.telephoneAffiche }}</a> ou sur <a href="{{ site.whatsapp }}" rel="noopener">WhatsApp</a>.</p></li>
+      <li><h3 class="h4">Vérifiez les horaires</h3><p>Consultez les <a href="/horaires/">horaires des prières</a> pour choisir un créneau calme.</p></li>
+      <li><h3 class="h4">Préparez votre trajet</h3><p>Utilisez les <a href="#itineraire">liens d'itinéraire</a> ci-dessus.</p></li>
+    </ol>
+    {% if site.conseilsVisite %}<h3>Sur place</h3><p>{{ site.conseilsVisite }}</p>{% endif %}
+  </div>
+</section>

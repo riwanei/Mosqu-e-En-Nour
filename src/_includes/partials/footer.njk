@@ -1,0 +1,31 @@
+<footer class="pied">
+  <div class="conteneur pied__grille">
+    <div class="pied__bloc">
+      <p class="pied__nom">{{ site.nom }}</p>
+      <p>{{ site.association }}<br>{{ site.ville }}{% if site.adresse.rue %}<br>{{ site.adresse.rue }}, {{ site.adresse.codePostal }} {{ site.adresse.ville }}{% endif %}</p>
+      <p><a href="{{ site.telephone | telHref }}">{{ site.telephoneAffiche }}</a>{% if site.email %}<br><a href="mailto:{{ site.email }}">{{ site.email }}</a>{% endif %}</p>
+    </div>
+    <nav class="pied__bloc" aria-label="Pages principales">
+      <p class="pied__titre">Le site</p>
+      <ul>
+        {%- for lien in navigation.principale %}<li><a href="{{ lien.url }}">{{ lien.titre }}</a></li>{% endfor %}
+      </ul>
+    </nav>
+    <nav class="pied__bloc" aria-label="Navigation secondaire">
+      <p class="pied__titre">Ressources</p>
+      <ul>
+        {%- for lien in navigation.secondaire %}<li><a href="{{ lien.url }}">{{ lien.titre }}</a></li>{% endfor %}
+      </ul>
+    </nav>
+    <div class="pied__bloc">
+      <p class="pied__titre">Nous suivre</p>
+      <ul>
+        {%- for r in site.reseaux %}<li><a href="{{ r.url }}" rel="noopener">{{ r.nom }}</a></li>{% endfor %}
+        <li><a href="{{ site.whatsapp }}" rel="noopener">WhatsApp</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="conteneur pied__bas">
+    <p>© {{ annee }} {{ site.nom }} · {{ site.associationCourt }} · RNA {{ site.rna }}</p>
+  </div>
+</footer>

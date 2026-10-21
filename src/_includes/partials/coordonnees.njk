@@ -1,0 +1,26 @@
+<dl class="infos">
+  <div>
+    <dt>Adresse</dt>
+    <dd>{% if site.adresse.rue %}{{ site.adresse.rue }}<br>{{ site.adresse.codePostal }} {{ site.adresse.ville }}{% else %}{{ site.adresse.ville }} (Rhône){% endif %}</dd>
+  </div>
+  <div>
+    <dt>Téléphone</dt>
+    <dd><a href="{{ site.telephone | telHref }}">{{ site.telephoneAffiche }}</a> <span class="discret">(standard de l'ACCI)</span></dd>
+  </div>
+  <div>
+    <dt>WhatsApp</dt>
+    <dd><a href="{{ site.whatsapp }}" rel="noopener">Écrire à l'association</a></dd>
+  </div>
+  {%- if site.email %}
+  <div>
+    <dt>E-mail</dt>
+    <dd><a href="mailto:{{ site.email }}">{{ site.email }}</a></dd>
+  </div>
+  {%- endif %}
+  {%- if site.horairesOuverture %}
+  <div>
+    <dt>Ouverture</dt>
+    <dd>{{ site.horairesOuverture }}</dd>
+  </div>
+  {%- endif %}
+</dl>

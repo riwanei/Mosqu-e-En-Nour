@@ -1,0 +1,51 @@
+---
+layout: layouts/base.njk
+title: "Horaires des prières"
+permalink: /horaires/
+description: "Horaires des prières de la mosquée En-Nour à Belleville-en-Beaujolais : Fajr, Dhuhr, Asr, Maghrib et Isha, heure de Paris, avec la source des données."
+---
+<header class="bandeau">
+  <div class="conteneur">
+    <p class="surtitre surtitre--clair">Prière</p>
+    <h1>Horaires des prières</h1>
+    <p class="bandeau__texte">Horaires de Belleville-en-Beaujolais, à l'heure de Paris. La date et la provenance des données sont indiquées sous chaque tableau.</p>
+  </div>
+</header>
+
+<section class="section" aria-labelledby="jour-titre">
+  <div class="conteneur conteneur--etroit">
+    <div class="carte carte--horaires">
+      <h2 id="jour-titre">Aujourd'hui</h2>
+      {% set mode = "jour" %}{% include "partials/horaires.njk" %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--teinte" aria-labelledby="mois-titre">
+  <div class="conteneur conteneur--etroit">
+    <h2 id="mois-titre">Calendrier du mois</h2>
+    {% set mode = "mois" %}{% include "partials/horaires.njk" %}
+    {% if horaires.calendrierPdf %}
+    <p><a class="bouton bouton--secondaire" href="{{ horaires.calendrierPdf }}" rel="noopener">Télécharger le calendrier officiel (PDF)</a></p>
+    {% endif %}
+  </div>
+</section>
+
+{% if horaires.vendredi %}
+<section class="section" aria-labelledby="vendredi-titre">
+  <div class="conteneur conteneur--etroit">
+    <h2 id="vendredi-titre">Prière du vendredi</h2>
+    <p>{{ horaires.vendredi }}</p>
+  </div>
+</section>
+{% endif %}
+
+<section class="section" aria-labelledby="info-titre">
+  <div class="conteneur conteneur--etroit">
+    <h2 id="info-titre">Bon à savoir</h2>
+    <ul class="puces">
+      <li>Les horaires sont donnés à l'heure légale française (fuseau Europe/Paris) et tiennent compte du changement d'heure.</li>
+      <li>En cas de doute, notamment lors des fêtes ou du Ramadan, renseignez-vous auprès de la mosquée au <a href="{{ site.telephone | telHref }}">{{ site.telephoneAffiche }}</a>.</li>
+    </ul>
+  </div>
+</section>

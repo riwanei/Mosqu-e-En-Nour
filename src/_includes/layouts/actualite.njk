@@ -1,0 +1,16 @@
+---
+layout: layouts/base.njk
+---
+<header class="bandeau bandeau--court">
+  <div class="conteneur conteneur--etroit">
+    <p class="surtitre surtitre--clair"><a href="/actualites/">Actualités</a>{% if categorie %} · {{ categorie }}{% endif %}</p>
+    <h1>{{ title }}</h1>
+    <p class="bandeau__texte"><time datetime="{{ page.date | dateIso }}">Publié le {{ page.date | dateFr }}</time></p>
+  </div>
+</header>
+<article class="section">
+  <div class="conteneur conteneur--etroit texte-riche">
+    {{ content | safe }}
+    <p><a class="lien-fleche" href="/actualites/">Toutes les actualités</a></p>
+  </div>
+</article>

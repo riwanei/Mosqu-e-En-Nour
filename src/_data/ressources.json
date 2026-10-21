@@ -1,0 +1,15 @@
+{
+  "textes": [
+    { "titre": "La citadelle du musulman", "description": "Recueil d'invocations du quotidien", "url": "https://citadelledumusulman.com/" },
+    { "titre": "Ryadh as-Salihin", "description": "Le jardin des vertueux, de l'imam an-Nawawi", "url": "http://islammedia.free.fr/Pages/ryadh_salihin/ryad_salihin.htm" },
+    { "titre": "Bibliothèque de hadiths", "description": "Hadiths authentiques classés par thème", "url": "https://bibliotheque-islamique.fr/hadith/hadith-authentique/" }
+  ],
+  "ecoute": [
+    { "titre": "Vidéos de la mosquée", "description": "Liste de lecture YouTube de l'ACCI", "url": "https://youtube.com/playlist?list=PLZBIPHKx778fa1KyeCovbDjukMKuHJJaJ" }
+  ],
+  "aMigrer": [
+    "Qu'est-ce que l'islam ?", "Les 5 piliers de l'islam", "Les 6 piliers de la foi", "Lecture du saint Coran", "Écoute du saint Coran", "Évènements religieux", "40 Rabanas",
+    "Mosquées voisines", "Hajj & Omra", "Commerces", "Partenaires", "Instances islamiques", "Obsèques", "Organisations humanitaires", "Administrations", "Notre ville",
+    "Les membres du Bureau", "Notre association en chiffres", "Votre mosquée en chiffres", "Fonctionnement de l'école", "Préinscription école d'arabe"
+  ]
+}

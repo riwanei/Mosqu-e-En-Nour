@@ -1,0 +1,7 @@
+{
+  "layout": "layouts/actualite.njk",
+  "permalink": "/actualites/{{ page.fileSlug }}/",
+  "eleventyComputed": {
+    "description": "{{ resume }}"
+  }
+}

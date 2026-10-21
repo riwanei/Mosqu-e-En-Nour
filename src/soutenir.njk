@@ -1,0 +1,40 @@
+---
+layout: layouts/base.njk
+title: "Soutenir la mosquée"
+permalink: /soutenir/
+description: "Soutenez le projet d'agrandissement de la mosquée En-Nour de Belleville-en-Beaujolais : don en ligne sur HelloAsso, adhésion à l'ACCI, bénévolat."
+---
+<header class="bandeau">
+  <div class="conteneur">
+    <p class="surtitre surtitre--clair">Projet d'extension</p>
+    <h1>Soutenir la mosquée</h1>
+    <p class="bandeau__texte">Agrandir la mosquée pour accueillir chaque fidèle dignement, et offrir aux enfants un lieu de foi, d'éducation et de fraternité.</p>
+  </div>
+</header>
+
+<section class="section" aria-labelledby="projet-titre">
+  <div class="conteneur deux-colonnes deux-colonnes--haut">
+    <div>
+      <h2 id="projet-titre">Le projet</h2>
+      <p>Depuis {{ site.fondation }}, la mosquée a grandi avec sa communauté. Aujourd'hui, l'ACCI porte un projet d'agrandissement pour que chacun puisse prier dans de bonnes conditions et que les enfants disposent d'un lieu d'apprentissage à la hauteur de leur envie d'apprendre.</p>
+      <p>Ce projet est une œuvre commune et un héritage pour les générations à venir. Chaque contribution compte, qu'elle soit financière ou par la prière.</p>
+    </div>
+    <div class="carte carte--don">
+      <h2 class="h3">Faire un don en ligne</h2>
+      <p>Les dons se font sur HelloAsso, la plateforme de paiement sécurisée utilisée par l'association. Le montant est libre.</p>
+      <p><a class="bouton bouton--principal bouton--large" href="{{ site.don.helloasso }}" rel="noopener">Donner sur HelloAsso<span class="visuellement-cache"> (site externe)</span></a></p>
+      <p class="discret">Vous quittez le site de la mosquée pour la page de collecte de l'ACCI sur helloasso.com. Si la page ne s'ouvre pas, contactez l'association au <a href="{{ site.telephone | telHref }}">{{ site.telephoneAffiche }}</a>.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--teinte" aria-labelledby="autres-titre">
+  <div class="conteneur">
+    <h2 id="autres-titre">D'autres façons d'aider</h2>
+    <ul class="grille-3">
+      <li class="tuile" id="adhesion"><h3>Adhérer à l'ACCI</h3><p>Rejoignez les membres actifs de l'association. <a href="/mosquee-acci/#adherer">Comment adhérer</a></p></li>
+      <li class="tuile"><h3>Donner de son temps</h3><p>Enseignement, opération Iftar, accueil : l'association s'appuie sur ses bénévoles. <a href="/contact-acces/">Nous contacter</a></p></li>
+      <li class="tuile"><h3>Faire connaître le projet</h3><p>Partagez cette page autour de vous et suivez l'actualité de la mosquée sur <a href="{{ site.reseaux[0].url }}" rel="noopener">Facebook</a>.</p></li>
+    </ul>
+  </div>
+</section>

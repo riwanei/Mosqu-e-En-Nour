@@ -1,0 +1,32 @@
+---
+layout: layouts/base.njk
+title: "Ressources & liens utiles"
+permalink: /ressources/
+description: "Textes de référence, écoute et documents utiles proposés par la mosquée En-Nour de Belleville-en-Beaujolais."
+---
+<header class="bandeau bandeau--court">
+  <div class="conteneur">
+    <p class="surtitre surtitre--clair">Pour aller plus loin</p>
+    <h1>Ressources &amp; liens utiles</h1>
+  </div>
+</header>
+
+<section class="section" aria-labelledby="textes-titre">
+  <div class="conteneur conteneur--etroit">
+    <h2 id="textes-titre">Textes de référence</h2>
+    <ul class="liens-ressources">
+      {%- for r in ressources.textes %}
+      <li><a href="{{ r.url }}" rel="noopener">{{ r.titre }}</a><span>{{ r.description }}</span></li>
+      {%- endfor %}
+    </ul>
+    <h2>Écouter et regarder</h2>
+    <ul class="liens-ressources">
+      {%- for r in ressources.ecoute %}
+      <li><a href="{{ r.url }}" rel="noopener">{{ r.titre }}</a><span>{{ r.description }}</span></li>
+      {%- endfor %}
+    </ul>
+    <h2>Documents de l'association</h2>
+    <p><a href="/mosquee-acci/#documents">Statuts, règlement intérieur et procès-verbaux d'assemblée générale</a></p>
+    <p class="discret">Les liens externes ouvrent des sites qui ne dépendent pas de la mosquée.</p>
+  </div>
+</section>
