@@ -1,0 +1,19 @@
+---
+layout: layouts/base.njk
+title: "Mentions légales"
+permalink: /mentions-legales/
+description: "Mentions légales du site de la mosquée En-Nour de Belleville-en-Beaujolais, édité par l'ACCI."
+---
+<header class="bandeau bandeau--court">
+  <div class="conteneur"><h1>Mentions légales</h1></div>
+</header>
+<section class="section">
+  <div class="conteneur conteneur--etroit texte-riche">
+    <h2>Éditeur</h2>
+    <p>{{ site.association }}<br>Association déclarée · RNA {{ site.rna }} · SIRET {{ site.siret }}<br>{% if site.adresse.rue %}{{ site.adresse.rue }}, {% endif %}{% if site.adresse.codePostal %}{{ site.adresse.codePostal }} {% endif %}{{ site.adresse.ville }}<br>Téléphone : <a href="{{ site.telephone | telHref }}">{{ site.telephoneAffiche }}</a></p>
+    {% if legal.directeurPublication %}<p>Directeur ou directrice de la publication : {{ legal.directeurPublication }}</p>{% endif %}
+    {% if legal.hebergeur %}<h2>Hébergement</h2><p>{{ legal.hebergeur }}</p>{% endif %}
+    <h2>Contenus</h2>
+    <p>Les textes et documents de ce site appartiennent à l'ACCI, sauf mention contraire. Les liens vers d'autres sites sont proposés à titre d'information.</p>
+  </div>
+</section>

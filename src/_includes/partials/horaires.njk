@@ -1,0 +1,20 @@
+{#- Bloc horaires. mode = "jour" (aujourd'hui) ou "mois" (calendrier du mois en cours).
+    Les données viennent de src/_data/horaires.json (source) et src/_data/calendrier.json (jours). Le script n'affiche des horaires que si
+    une source est renseignée ET que la date du jour (Europe/Paris) figure dans les données. -#}
+<div class="horaires" data-horaires="{{ mode or 'jour' }}">
+  <script type="application/json" class="horaires__donnees">{{ horaires | dump | safe }}</script>
+  <script type="application/json" class="horaires__jours">{{ calendrier.jours | dump | safe }}</script>
+  <div class="horaires__repli" data-horaires-repli>
+    {%- if mode == "mois" %}
+    <p>Aucun calendrier officiel n'est publié sur le site pour ce mois. <strong>Horaires à confirmer auprès de la mosquée.</strong></p>
+    {%- else %}
+    <p class="horaires__repli-titre">Horaires à confirmer auprès de la mosquée</p>
+    <p>Les horaires officiels ne sont pas disponibles sur le site pour aujourd'hui. Vous pouvez les demander au standard de l'association.</p>
+    <p class="horaires__repli-actions">
+      <a class="bouton bouton--secondaire" href="{{ site.telephone | telHref }}">Appeler le {{ site.telephoneAffiche }}</a>
+      <a class="bouton bouton--secondaire" href="{{ site.whatsapp }}" rel="noopener">Écrire sur WhatsApp</a>
+    </p>
+    {%- endif %}
+  </div>
+  <div class="horaires__contenu" data-horaires-contenu hidden></div>
+</div>

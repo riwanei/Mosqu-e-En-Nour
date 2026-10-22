@@ -1,0 +1,37 @@
+---
+layout: layouts/base.njk
+title: "Actualités"
+permalink: /actualites/
+eleventyExcludeFromCollections: true
+description: "Annonces, événements et vie de la mosquée En-Nour de Belleville-en-Beaujolais."
+---
+<header class="bandeau">
+  <div class="conteneur">
+    <p class="surtitre surtitre--clair">Vie de la mosquée</p>
+    <h1>Actualités</h1>
+    <p class="bandeau__texte">Annonces, événements et nouvelles de l'association, publiés par l'ACCI.</p>
+  </div>
+</header>
+
+<section class="section" aria-label="Liste des actualités">
+  <div class="conteneur conteneur--etroit">
+    {%- if collections.actualites.length %}
+    {%- set categories = [] %}
+    {%- for a in collections.actualites %}{% if a.data.categorie and not (a.data.categorie in categories) %}{% set categories = (categories.push(a.data.categorie), categories) %}{% endif %}{% endfor %}
+    {%- if categories.length > 1 %}
+    <div class="filtres" data-filtres hidden>
+      <p class="filtres__libelle" id="filtres-libelle">Filtrer par thème</p>
+      <div class="filtres__boutons" role="group" aria-labelledby="filtres-libelle">
+        <button type="button" class="filtre" data-filtre="" aria-pressed="true">Tout</button>
+        {%- for c in categories %}
+        <button type="button" class="filtre" data-filtre="{{ c | lower }}" aria-pressed="false">{{ c }}</button>
+        {%- endfor %}
+      </div>
+      <p class="visuellement-cache" aria-live="polite" data-filtres-statut></p>
+    </div>
+    {%- endif %}
+    {%- endif %}
+    {% set listeActus = collections.actualites %}
+    {% include "partials/liste-actualites.njk" %}
+  </div>
+</section>

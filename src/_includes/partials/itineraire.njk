@@ -1,0 +1,12 @@
+{%- if site.adresse.rue %}
+{%- set destination = site.adresse.rue + ", " + site.adresse.codePostal + " " + site.adresse.ville %}
+{%- else %}
+{%- set destination = "Mosquée Ennour, Belleville-en-Beaujolais" %}
+{%- endif %}
+<p>{% if site.adresse.rue %}Ouvrez l'itinéraire dans l'application de votre choix.{% else %}Recherchez la mosquée dans l'application de cartes de votre choix.{% endif %}</p>
+<ul class="liens-itineraire">
+  <li><a class="bouton bouton--principal" href="https://www.google.com/maps/dir/?api=1&amp;destination={{ destination | urlencode }}" rel="noopener">Google Maps</a></li>
+  <li><a class="bouton bouton--secondaire" href="https://maps.apple.com/?daddr={{ destination | urlencode }}" rel="noopener">Plans (Apple)</a></li>
+  <li><a class="bouton bouton--secondaire" href="https://www.openstreetmap.org/search?query={{ destination | urlencode }}" rel="noopener">OpenStreetMap</a></li>
+</ul>
+<p class="discret">Ces liens ouvrent un service externe. S'il ne répond pas, appelez le <a href="{{ site.telephone | telHref }}">{{ site.telephoneAffiche }}</a>.</p>

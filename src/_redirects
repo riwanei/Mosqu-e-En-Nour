@@ -1,0 +1,49 @@
+# Redirections des anciennes pages (format Netlify / Cloudflare Pages).
+# Chaque ancienne adresse figure en version encodée (envoyée par les navigateurs) et en clair.
+# Les cibles « /ressources/ » sont provisoires tant que les contenus correspondants ne sont pas repris.
+
+/%C3%80-propos-de-nous  /mosquee-acci/  301
+/À-propos-de-nous  /mosquee-acci/  301
+/notre-histoire-1  /mosquee-acci/#histoire  301
+/les-membres-du-bureau  /mosquee-acci/  301
+/adh%C3%A9sion-en-ligne  /mosquee-acci/#adherer  301
+/adhésion-en-ligne  /mosquee-acci/#adherer  301
+/documents-de-r%C3%A9f%C3%A9rence  /mosquee-acci/#documents  301
+/documents-de-référence  /mosquee-acci/#documents  301
+/notre-association-en-chiffres  /mosquee-acci/  301
+/pr%C3%A9sentation-de-notre-mosqu%C3%A9e  /mosquee-acci/  301
+/présentation-de-notre-mosquée  /mosquee-acci/  301
+/les-services-propos%C3%A9s-par-la-mosqu%C3%A9e  /mosquee-acci/#services  301
+/les-services-proposés-par-la-mosquée  /mosquee-acci/#services  301
+/votre-mosqu%C3%A9e-en-chiffres  /mosquee-acci/  301
+/votre-mosquée-en-chiffres  /mosquee-acci/  301
+/horaires-des-pri%C3%A8res  /horaires/  301
+/horaires-des-prières  /horaires/  301
+/horaires-des-pri%C3%A8res-1  /horaires/  301
+/horaires-des-prières-1  /horaires/  301
+/pr%C3%A9sentation-de-l-%C3%A9cole-d-arabe  /ecole-cours/  301
+/présentation-de-l-école-d-arabe  /ecole-cours/  301
+/programme-des-dorous-cours  /ecole-cours/#dorous  301
+/extension-de-votre-mosqu%C3%A9e  /soutenir/  301
+/extension-de-votre-mosquée  /soutenir/  301
+/qu-est-ce-que-l-islam  /ressources/  301
+/les-5-piliers-de-l-islam  /ressources/  301
+/les-6-piliers-de-la-foi  /ressources/  301
+/lecture-du-saint-coran-1  /ressources/  301
+/%C3%89coute-du-saint-coran  /ressources/  301
+/Écoute-du-saint-coran  /ressources/  301
+/%C3%89v%C3%A8nements-religieux  /actualites/  301
+/Évènements-religieux  /actualites/  301
+/40-rabanas-2  /ressources/  301
+/mosqu%C3%A9es-voisines-1  /ressources/  301
+/mosquées-voisines-1  /ressources/  301
+/hajj-omra  /ressources/  301
+/commerces  /ressources/  301
+/partenaires  /ressources/  301
+/instances-islamiques  /ressources/  301
+/obs%C3%A8ques  /mosquee-acci/#services  301
+/obsèques  /mosquee-acci/#services  301
+/organisations-humanitaires  /ressources/  301
+/administrations  /ressources/  301
+/notre-ville  /contact-acces/  301
+/privacy  /confidentialite/  301

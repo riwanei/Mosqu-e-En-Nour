@@ -1,0 +1,28 @@
+<header class="entete">
+  <div class="entete__barre conteneur">
+    <a class="marque" href="/" {% if page.url == "/" %}aria-current="page"{% endif %}>
+      {%- if site.logo %}
+      <img class="marque__logo" src="{{ site.logo }}" alt="{{ site.nom }}" width="160" height="48">
+      {%- else %}
+      {% include "partials/emblem.njk" %}
+      <span class="marque__texte">
+        <span class="marque__nom">{{ site.nom }}</span>
+        <span class="marque__lieu">{{ site.ville }}</span>
+      </span>
+      {%- endif %}
+    </a>
+    <button class="menu-bouton" type="button" aria-expanded="false" aria-controls="navigation-principale" hidden>
+      <span class="menu-bouton__icone" aria-hidden="true"></span>
+      <span class="menu-bouton__texte">Menu</span>
+    </button>
+    <nav class="navigation" id="navigation-principale" aria-label="Navigation principale">
+      <ul class="navigation__liste">
+        {%- for lien in navigation.principale %}
+        {%- set actif = (page.url == lien.url) or (lien.url != "/" and page.url.startsWith(lien.url)) %}
+        <li><a href="{{ lien.url }}" {% if actif %}aria-current="page"{% endif %}>{{ lien.titre }}</a></li>
+        {%- endfor %}
+      </ul>
+      <a class="bouton bouton--principal navigation__soutenir" href="/don/" {% if page.url.startsWith("/don/") %}aria-current="page"{% endif %}>Soutenir la mosquée</a>
+    </nav>
+  </div>
+</header>

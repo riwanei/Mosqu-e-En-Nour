@@ -1,0 +1,113 @@
+---
+layout: layouts/base.njk
+title: ""
+pageClass: accueil
+description: "Mosquée En-Nour de Belleville-en-Beaujolais (Rhône), gérée par l'ACCI depuis 1988 : horaires des prières, école d'arabe, cours, visite et soutien au projet d'agrandissement."
+---
+<section class="intro" aria-labelledby="intro-titre">
+  <div class="intro__motif" aria-hidden="true"></div>
+  <div class="conteneur intro__contenu">
+    <p class="surtitre surtitre--clair intro__surtitre">{{ site.nom }} · {{ site.ville }}</p>
+    <h1 id="intro-titre">Un lieu de foi, de transmission et de fraternité</h1>
+    <p class="intro__texte">Depuis {{ site.fondation }}, la mosquée accueille les fidèles pour la prière et transmet la langue arabe et le Coran aux plus jeunes.<span class="intro__suite"> Elle reste ouverte à tous ceux qui souhaitent la découvrir.</span></p>
+    <p class="intro__actions">
+      <a class="bouton bouton--clair" href="#horaires-du-jour">Voir les horaires</a>
+      <a class="bouton bouton--contour-clair" href="/contact-acces/#visite">Préparer ma visite</a>
+    </p>
+  </div>
+</section>
+
+<section class="section section--horaires" id="horaires-du-jour" aria-labelledby="horaires-titre">
+  <div class="conteneur">
+    <div class="carte carte--horaires">
+      <div class="carte__entete">
+        <h2 id="horaires-titre">Horaires du jour</h2>
+        <a class="lien-fleche" href="/horaires/">Calendrier complet</a>
+      </div>
+      {% set mode = "jour" %}{% include "partials/horaires.njk" %}
+    </div>
+  </div>
+</section>
+
+{% if annonce.active %}
+<section class="section section--serree" aria-labelledby="annonce-titre">
+  <div class="conteneur">
+    <div class="annonce">
+      <p class="annonce__etiquette">À la une</p>
+      <h2 id="annonce-titre" class="annonce__titre">{{ annonce.titre }}</h2>
+      <p>{{ annonce.texte }}</p>
+      {% if annonce.lien %}<p><a class="lien-fleche" href="{{ annonce.lien }}">{{ annonce.lienTexte or "En savoir plus" }}</a></p>{% endif %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section class="section" aria-labelledby="activites-titre">
+  <div class="conteneur">
+    <p class="surtitre">Vie de la mosquée</p>
+    <h2 id="activites-titre">Prier, apprendre, partager</h2>
+    <ul class="grille-3 acces-activites">
+      <li class="tuile">
+        <h3><a class="tuile__lien" href="/ecole-cours/">École d'arabe</a></h3>
+        <p>Lecture, écriture et compréhension de l'arabe, du niveau préparatoire au niveau 3, le week-end.</p>
+      </li>
+      <li class="tuile">
+        <h3><a class="tuile__lien" href="/ecole-cours/#dorous">Cours et dorous</a></h3>
+        <p>Tafsir, Ryad as-Salihin, les noms d'Allah, la Sîra : des cours de 45 minutes à la mosquée.</p>
+      </li>
+      <li class="tuile">
+        <h3><a class="tuile__lien" href="/mosquee-acci/#services">Services et entraide</a></h3>
+        <p>Accompagnement des familles lors d'un décès, aide aux personnes dans le besoin, opération Iftar.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section--teinte" aria-labelledby="extension-titre">
+  <div class="conteneur deux-colonnes">
+    <div>
+      <p class="surtitre">Projet d'extension</p>
+      <h2 id="extension-titre">Agrandir notre mosquée, ensemble</h2>
+      <p>Pour accueillir chaque fidèle dignement et offrir aux enfants un lieu de foi, d'éducation et de fraternité, l'ACCI prévoit d'agrandir la mosquée : une salle de prière pour les hommes au rez-de-chaussée, une salle pour les femmes à l'étage, organisées autour d'un patio. Chaque contribution compte, par le don comme par la prière.</p>
+      <p class="actions">
+        <a class="bouton bouton--principal" href="/don/">Faire un don</a>
+        <a class="bouton bouton--secondaire" href="/soutenir/">Découvrir le projet</a>
+      </p>
+    </div>
+    <figure class="composition composition--image">
+      <picture>
+        <source srcset="/assets/img/projet/facade-nord.webp" type="image/webp">
+        <img src="/assets/img/projet/facade-nord.jpg" width="534" height="221" loading="lazy" decoding="async" alt="Façade nord du projet d'extension, avec un claustra en bois aux motifs géométriques à l'entrée.">
+      </picture>
+      <figcaption>Façade du projet, permis de construire de septembre 2024. <a href="/soutenir/#plans">Voir les plans</a></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="actus-titre">
+  <div class="conteneur">
+    <div class="section__entete">
+      <div>
+        <p class="surtitre">Actualités</p>
+        <h2 id="actus-titre">Dernières nouvelles</h2>
+      </div>
+      <a class="lien-fleche" href="/actualites/">Toutes les actualités</a>
+    </div>
+    {% set listeActus = collections.actualites | head(3) %}
+    {% include "partials/liste-actualites.njk" %}
+  </div>
+</section>
+
+<section class="section section--teinte" aria-labelledby="acces-titre">
+  <div class="conteneur deux-colonnes">
+    <div>
+      <p class="surtitre">Venir à la mosquée</p>
+      <h2 id="acces-titre">Informations d'accès</h2>
+      {% include "partials/coordonnees.njk" %}
+    </div>
+    <div class="carte">
+      <h3>Itinéraire</h3>
+      {% include "partials/itineraire.njk" %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,18 @@
+{
+  "principale": [
+    { "titre": "Accueil", "url": "/" },
+    { "titre": "La mosquée & l'ACCI", "url": "/mosquee-acci/" },
+    { "titre": "Horaires", "url": "/horaires/" },
+    { "titre": "École & cours", "url": "/ecole-cours/" },
+    { "titre": "Actualités", "url": "/actualites/" },
+    { "titre": "Contact & accès", "url": "/contact-acces/" }
+  ],
+  "secondaire": [
+    { "titre": "Ressources & liens utiles", "url": "/ressources/" },
+    { "titre": "Documents de l'association", "url": "/mosquee-acci/#documents" },
+    { "titre": "Faire un don", "url": "/don/" },
+    { "titre": "Projet d'extension", "url": "/soutenir/" },
+    { "titre": "Mentions légales", "url": "/mentions-legales/" },
+    { "titre": "Confidentialité", "url": "/confidentialite/" }
+  ]
+}

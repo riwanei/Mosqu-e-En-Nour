@@ -1,0 +1,26 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Mosque",
+  "name": {{ site.nom | dump | safe }},
+  "url": {{ site.url | dump | safe }},
+  "telephone": {{ site.telephone | dump | safe }},
+  "foundingDate": {{ site.fondation | dump | safe }},
+  "address": {
+    "@type": "PostalAddress",
+    {%- if site.adresse.rue %}
+    "streetAddress": {{ site.adresse.rue | dump | safe }},
+    {%- endif %}
+    {%- if site.adresse.codePostal %}
+    "postalCode": {{ site.adresse.codePostal | dump | safe }},
+    {%- endif %}
+    "addressLocality": {{ site.adresse.ville | dump | safe }},
+    "addressRegion": "Rhône",
+    "addressCountry": "FR"
+  },
+  {%- if site.adresse.latitude %}
+  "geo": { "@type": "GeoCoordinates", "latitude": {{ site.adresse.latitude }}, "longitude": {{ site.adresse.longitude }} },
+  {%- endif %}
+  "sameAs": [{% for r in site.reseaux %}{{ r.url | dump | safe }}{% if not loop.last %}, {% endif %}{% endfor %}]
+}
+</script>

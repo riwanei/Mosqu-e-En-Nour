@@ -1,0 +1,18 @@
+{%- if listeActus and listeActus.length %}
+<ul class="actus" data-actus>
+  {%- for actu in listeActus %}
+  <li class="actu" data-categorie="{{ actu.data.categorie | lower }}">
+    <article>
+      <p class="actu__meta"><time datetime="{{ actu.date | dateIso }}">{{ actu.date | dateFr }}</time>{% if actu.data.categorie %} · <span>{{ actu.data.categorie }}</span>{% endif %}</p>
+      <h3 class="actu__titre"><a href="{{ actu.url }}">{{ actu.data.title }}</a></h3>
+      {% if actu.data.resume %}<p>{{ actu.data.resume }}</p>{% endif %}
+    </article>
+  </li>
+  {%- endfor %}
+</ul>
+{%- else %}
+<div class="vide">
+  <p>Aucune actualité n'est publiée sur le site pour le moment.</p>
+  <p>Les annonces de la mosquée sont aussi relayées sur <a href="{{ site.reseaux[0].url }}" rel="noopener">Facebook</a> et <a href="{{ site.reseaux[1].url }}" rel="noopener">Instagram</a>.</p>
+</div>
+{%- endif %}

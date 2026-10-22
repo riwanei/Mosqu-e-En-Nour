@@ -1,0 +1,136 @@
+# Espace d'édition (Decap CMS). Documentation : docs/GUIDE-MISE-A-JOUR.md
+backend:
+  name: github
+  repo: riwanei/mosqu-e-en-nour
+  branch: main
+  # Sur Netlify, l'authentification GitHub passe par le fournisseur OAuth de Netlify.
+  base_url: https://api.netlify.com
+  commit_messages:
+    create: "Ajout : {{collection}} « {{slug}} »"
+    update: "Mise à jour : {{collection}} « {{slug}} »"
+    delete: "Suppression : {{collection}} « {{slug}} »"
+
+# En local : lancer « npm run cms » dans un terminal, puis « npm start ».
+local_backend: true
+
+locale: fr
+site_url: https://www.mosquee-ennour.org
+display_url: https://www.mosquee-ennour.org
+media_folder: src/assets/uploads
+public_folder: /assets/uploads
+
+collections:
+  - name: actualites
+    label: Actualités
+    label_singular: Actualité
+    folder: src/actualites
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    sortable_fields: [date, title]
+    summary: "{{date | date('DD/MM/YYYY')}} · {{title}}"
+    fields:
+      - { name: title, label: Titre, widget: string }
+      - { name: date, label: "Date de publication", widget: datetime, date_format: "DD/MM/YYYY", time_format: false, format: "YYYY-MM-DD" }
+      - { name: categorie, label: Thème, widget: select, options: ["Annonce", "Événement", "École", "Vie de l'association"] }
+      - { name: resume, label: "Résumé (une phrase, affichée dans les listes)", widget: text }
+      - { name: brouillon, label: "Brouillon (non publié)", widget: boolean, default: false, required: false }
+      - { name: body, label: Texte, widget: markdown }
+
+  - name: reglages
+    label: Réglages du site
+    editor: { preview: false }
+    files:
+      - name: annonce
+        label: Annonce prioritaire (accueil)
+        file: src/_data/annonce.json
+        fields:
+          - { name: active, label: "Afficher l'annonce", widget: boolean }
+          - { name: titre, label: Titre, widget: string }
+          - { name: texte, label: Texte, widget: text }
+          - { name: lienTexte, label: "Texte du lien", widget: string, required: false }
+          - { name: lien, label: "Adresse du lien (ex. /soutenir/)", widget: string, required: false }
+
+      - name: horaires
+        label: Horaires — source et informations
+        file: src/_data/horaires.json
+        fields:
+          - { name: source, label: "Source officielle (vide = « Horaires à confirmer »)", widget: string, required: false }
+          - { name: sourceUrl, label: "Lien vers la source", widget: string, required: false }
+          - { name: valideePar, label: "Validé par", widget: string, required: false }
+          - { name: miseAJour, label: "Date de mise à jour (ex. 21 octobre 2026)", widget: string, required: false }
+          - { name: fuseau, label: Fuseau horaire, widget: hidden, default: "Europe/Paris" }
+          - { name: calendrierPdf, label: "Calendrier officiel (PDF)", widget: file, required: false }
+          - { name: vendredi, label: "Prière du vendredi (seulement si confirmé)", widget: text, required: false }
+          - { name: iqamaConfirmee, label: "Afficher les iqamas (seulement si confirmées)", widget: boolean, default: false, required: false }
+
+      - name: ecole
+        label: École & cours
+        file: src/_data/ecole.json
+        fields:
+          - { name: anneeScolaire, label: "Année scolaire (ex. 2026-2027)", widget: string, required: false }
+          - { name: inscriptionsTexte, label: "Modalités d'inscription", widget: text, required: false }
+          - { name: inscriptionsLien, label: "Lien du formulaire d'inscription", widget: string, required: false }
+          - { name: horairesDetailles, label: "Horaires des classes", widget: text, required: false }
+          - { name: tarifs, label: "Tarifs (seulement si validés)", widget: text, required: false }
+          - { name: reglement, label: "Règlement de l'école (PDF)", widget: file, required: false }
+          - { name: dorousValides, label: "Programme des dorous confirmé", widget: boolean, default: false, required: false }
+
+      - name: site
+        label: Coordonnées et informations pratiques
+        file: src/_data/site.json
+        fields:
+          - { name: nom, label: Nom affiché, widget: string }
+          - { name: ville, label: Ville, widget: string }
+          - { name: association, label: "Nom de l'association", widget: string }
+          - { name: associationCourt, label: Sigle, widget: string }
+          - { name: url, label: "Adresse du site", widget: string }
+          - { name: langue, label: Langue, widget: hidden, default: fr }
+          - { name: logo, label: "Logo officiel", widget: image, required: false }
+          - { name: fondation, label: "Année de fondation", widget: string }
+          - { name: rna, label: RNA, widget: string }
+          - { name: siret, label: SIRET, widget: string }
+          - name: adresse
+            label: Adresse
+            widget: object
+            fields:
+              - { name: rue, label: "Numéro et rue", widget: string, required: false }
+              - { name: codePostal, label: "Code postal", widget: string, required: false }
+              - { name: ville, label: Ville, widget: string }
+              - { name: latitude, label: Latitude, widget: string, required: false }
+              - { name: longitude, label: Longitude, widget: string, required: false }
+          - { name: telephone, label: "Téléphone (format international)", widget: string }
+          - { name: telephoneAffiche, label: "Téléphone (affiché)", widget: string }
+          - { name: whatsapp, label: "Lien WhatsApp", widget: string }
+          - { name: email, label: "E-mail", widget: string, required: false }
+          - { name: horairesOuverture, label: "Horaires d'ouverture", widget: text, required: false }
+          - { name: accesPmr, label: "Accessibilité", widget: text, required: false }
+          - { name: stationnement, label: Stationnement, widget: text, required: false }
+          - { name: transports, label: Transports, widget: text, required: false }
+          - { name: conseilsVisite, label: "Conseils pour la visite", widget: text, required: false }
+          - name: don
+            label: Dons
+            widget: object
+            fields:
+              - { name: helloasso, label: "Lien HelloAsso", widget: string }
+              - { name: lienConfirme, label: "Lien confirmé par le bureau", widget: boolean }
+              - { name: rib, label: "RIB de l'association (PDF, vide = virement non proposé)", widget: string, required: false }
+              - { name: ribConfirme, label: "RIB confirmé par le bureau", widget: boolean, required: false }
+          - name: adhesion
+            label: Adhésion
+            widget: object
+            fields:
+              - { name: lien, label: "Lien d'adhésion en ligne", widget: string, required: false }
+              - { name: bulletin, label: "Bulletin d'adhésion (PDF)", widget: string }
+          - name: reseaux
+            label: Réseaux sociaux
+            widget: list
+            fields:
+              - { name: nom, label: Nom, widget: string }
+              - { name: url, label: Lien, widget: string }
+
+      - name: legal
+        label: Mentions légales
+        file: src/_data/legal.json
+        fields:
+          - { name: directeurPublication, label: "Directeur ou directrice de la publication", widget: string, required: false }
+          - { name: hebergeur, label: "Hébergeur (nom, adresse)", widget: text, required: false }
