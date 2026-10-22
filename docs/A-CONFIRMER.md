@@ -17,7 +17,8 @@ Cette liste est destinée au responsable du site. Tant qu'une information n'est 
 
 ## À confirmer dans les textes
 
-- **Graphie du nom** : le brief dit « En-Nour », l'ancien site et HelloAsso disent « Ennour ». Le nom se modifie dans Réglages → Coordonnées.
+- **Graphie du nom** : l'affiche du projet d'extension écrit « Mosquée En-Nour » (مسجد النور), graphie retenue sur le site. L'ancien site et HelloAsso écrivent « Ennour ».
+- **Projet d'extension** : les plans et la description viennent d'une photo de l'affiche (permis de construire de septembre 2024). Les surfaces (environ 244 m² et 177 m²) ont été lues sur la photo et sont à vérifier. Les fichiers PDF originaux des plans donneraient des images nettes. La destination du QR code de l'affiche n'a pas pu être lue : le site renvoie vers la page HelloAsso connue.
 - **Accueil des visiteurs** : l'accueil et la page Contact disent que la mosquée « reste ouverte à tous ceux qui souhaitent la découvrir » et invitent à prévenir avant une visite. Ces phrases sont à valider, ainsi que les éventuelles conditions de visite (groupes, scolaires, tenue).
 - **Programme des dorous** : repris de l'ancien site, qui ne donne aucune date de validité.
 - **École d'arabe** : capacité (8 classes de 15 élèves), 4 niveaux et séances de 2 h 30 le samedi et/ou le dimanche, repris de l'ancien site. La page « À propos » de l'ancien site évoque plus de 90 élèves par an : ce chiffre n'a pas été repris.
