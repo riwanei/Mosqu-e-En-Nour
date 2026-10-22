@@ -29,7 +29,9 @@
 
   "don": {
     "helloasso": "https://www.helloasso.com/associations/acci-association-culturelle-et-cultuelle-islamique-mosquee-ennour-belleville-en-beaujolais/formulaires/1",
-    "lienConfirme": false
+    "lienConfirme": false,
+    "rib": "https://www.mosquee-ennour.org/versions/2/wizard/modules/fileManager/downloadDigitalFile.php?url=https%3A%2F%2Ffiles.cdn-files-a.com%2Fuploads%2F5192581%2Fsecure%2Fnormal_627e8aa6246eb.pdf",
+    "ribConfirme": false
   },
   "adhesion": {
     "lien": "",

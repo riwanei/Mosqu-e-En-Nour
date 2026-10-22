@@ -113,6 +113,8 @@ collections:
             fields:
               - { name: helloasso, label: "Lien HelloAsso", widget: string }
               - { name: lienConfirme, label: "Lien confirmé par le bureau", widget: boolean }
+              - { name: rib, label: "RIB de l'association (PDF, vide = virement non proposé)", widget: string, required: false }
+              - { name: ribConfirme, label: "RIB confirmé par le bureau", widget: boolean, required: false }
           - name: adhesion
             label: Adhésion
             widget: object

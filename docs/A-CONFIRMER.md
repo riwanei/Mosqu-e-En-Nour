@@ -7,6 +7,7 @@ Cette liste est destinée au responsable du site. Tant qu'une information n'est 
 | Information | Où la saisir | Ce qui s'affiche en attendant |
 |---|---|---|
 | Validité du lien de don HelloAsso (voir la note ci-dessous) | Réglages → Coordonnées → Dons | Le lien actuel |
+| RIB de l'association, proposé pour les dons par virement sur la page « Faire un don » (repris de l'ancien site) | Réglages → Coordonnées → Dons | Le lien vers le PDF de l'ancien site. Videz le champ pour retirer le virement. |
 | Source officielle des horaires de prière et calendrier de l'année | Réglages → Horaires + import CSV | « Horaires à confirmer auprès de la mosquée » |
 | Directeur ou directrice de la publication | Réglages → Mentions légales | Rien (obligation légale) |
 | Hébergeur du site | Réglages → Mentions légales | Rien (obligation légale) |

@@ -1,0 +1,71 @@
+---
+layout: layouts/base.njk
+title: "Faire un don"
+permalink: /don/
+description: "Faire un don à la mosquée En-Nour de Belleville-en-Beaujolais : don en ligne sécurisé sur HelloAsso, ponctuel ou mensuel, pour le projet d'agrandissement."
+---
+<header class="bandeau">
+  <div class="conteneur">
+    <p class="surtitre surtitre--clair">Sadaqa · Soutien</p>
+    <h1>Faire un don</h1>
+    <p class="bandeau__texte">Votre don aide l'ACCI à agrandir la mosquée pour accueillir chaque fidèle dignement et offrir aux enfants un lieu de foi, d'éducation et de fraternité.</p>
+  </div>
+</header>
+
+<section class="section" aria-labelledby="donner-titre">
+  <div class="conteneur">
+    <h2 id="donner-titre" class="visuellement-cache">Comment donner</h2>
+    <div class="dons">
+      <article class="carte carte--don don-option don-option--principale">
+        <p class="surtitre">Le plus simple</p>
+        <h3>Don en ligne</h3>
+        <p>Sur HelloAsso, la plateforme de paiement sécurisée utilisée par l'association. Vous choisissez librement le montant, et vous pouvez donner une fois ou chaque mois.</p>
+        <ol class="etapes etapes--compactes">
+          <li><p>Ouvrez la page de collecte de l'ACCI.</p></li>
+          <li><p>Choisissez « Don ponctuel » ou « Don mensuel » et le montant.</p></li>
+          <li><p>Réglez par carte bancaire sur la page sécurisée de HelloAsso.</p></li>
+        </ol>
+        <p><a class="bouton bouton--principal bouton--large" href="{{ site.don.helloasso }}" rel="noopener">Donner en ligne sur HelloAsso<span class="visuellement-cache"> (site externe)</span></a></p>
+        <p class="discret">HelloAsso est financé par les contributions volontaires de ses utilisateurs : au moment de payer, il peut vous proposer d'en ajouter une. Elle est facultative et vous pouvez la modifier.</p>
+      </article>
+
+      {% if site.don.rib %}
+      <article class="carte don-option">
+        <h3>Par virement</h3>
+        <p>Vous pouvez aussi faire un virement sur le compte de l'association. Le RIB est disponible en PDF.</p>
+        <p><a class="bouton bouton--secondaire" href="{{ site.don.rib }}" rel="noopener">Télécharger le RIB de l'ACCI (PDF)</a></p>
+      </article>
+      {% endif %}
+
+      <article class="carte don-option">
+        <h3>Une question sur votre don ?</h3>
+        <p>Pour un don important, un reçu ou toute autre question, l'association vous répond.</p>
+        <p class="actions">
+          <a class="bouton bouton--secondaire" href="{{ site.telephone | telHref }}">Appeler le {{ site.telephoneAffiche }}</a>
+          <a class="bouton bouton--secondaire" href="{{ site.whatsapp }}" rel="noopener">WhatsApp</a>
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section--teinte" aria-labelledby="usage-titre">
+  <div class="conteneur deux-colonnes deux-colonnes--haut">
+    <div>
+      <h2 id="usage-titre">À quoi sert votre don</h2>
+      <p>La collecte en ligne finance l'agrandissement de la mosquée : une salle de prière pour les hommes autour d'un patio au rez-de-chaussée, une salle pour les femmes à l'étage, des salles d'ablution et des entrées distinctes.</p>
+      <p><a class="lien-fleche" href="/soutenir/#plans">Voir le projet et ses plans</a></p>
+    </div>
+    <blockquote class="citation">
+      <p>« Le projet d'agrandissement de votre mosquée voit le jour. Sans l'aide d'Allah puis de la communauté, cela est impossible. Jazakoum Allahou khayran. »</p>
+      <footer>Les membres de l'ACCI</footer>
+    </blockquote>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="autres-aides-titre">
+  <div class="conteneur conteneur--etroit">
+    <h2 id="autres-aides-titre">Aider autrement</h2>
+    <p>Vous pouvez aussi <a href="/mosquee-acci/#adherer">adhérer à l'ACCI</a>, donner de votre temps comme bénévole ou faire connaître le projet autour de vous.</p>
+  </div>
+</section>

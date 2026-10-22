@@ -10,7 +10,8 @@
   "secondaire": [
     { "titre": "Ressources & liens utiles", "url": "/ressources/" },
     { "titre": "Documents de l'association", "url": "/mosquee-acci/#documents" },
-    { "titre": "Soutenir la mosquée", "url": "/soutenir/" },
+    { "titre": "Faire un don", "url": "/don/" },
+    { "titre": "Projet d'extension", "url": "/soutenir/" },
     { "titre": "Mentions légales", "url": "/mentions-legales/" },
     { "titre": "Confidentialité", "url": "/confidentialite/" }
   ]

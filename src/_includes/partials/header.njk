@@ -22,7 +22,7 @@
         <li><a href="{{ lien.url }}" {% if actif %}aria-current="page"{% endif %}>{{ lien.titre }}</a></li>
         {%- endfor %}
       </ul>
-      <a class="bouton bouton--principal navigation__soutenir" href="/soutenir/" {% if page.url.startsWith("/soutenir/") %}aria-current="page"{% endif %}>Soutenir la mosquée</a>
+      <a class="bouton bouton--principal navigation__soutenir" href="/don/" {% if page.url.startsWith("/don/") %}aria-current="page"{% endif %}>Soutenir la mosquée</a>
     </nav>
   </div>
 </header>
